@@ -4,4 +4,6 @@ header {
   margin: 0;
   display: flex;
   justify-content: center;
+  background-color: #fff;
+  color: #384657;
 }

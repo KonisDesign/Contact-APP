@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Post.css";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -13,10 +14,11 @@ const Posts = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {Array.isArray(posts) && posts.map(post => (
-        <div key={post._id}>
-          <h2>{post.Firstname}</h2>
+        <div className="card" key={post._id}>
+          <img src={!post.Pic ? process.env.PUBLIC_URL + `/images/profile.png` : post.Pic} alt="profile"/>
+          <h2>{post.Lastname} {post.Firstname}</h2>
           <p>{post.Phone}</p>
         </div>
       ))}
