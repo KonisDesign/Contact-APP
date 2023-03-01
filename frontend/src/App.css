@@ -7,3 +7,132 @@ header {
   background-color: #fff;
   color: #384657;
 }
+
+a {
+  text-decoration: none;
+  color: #384657;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: 20px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0;
+  gap: 20px;
+}
+
+.container .card {
+  width: 250px;
+  height: auto;
+  padding-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.container .card:hover button {
+  display: block;
+}
+
+img {
+  width: 70%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.edit {
+  display: none;
+  border: none;
+  color: #969EA8;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.new {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 35px;
+  background-color: #5356FB;
+  font-size: 30px;
+  color: #FFF;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.add-container {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-container form {
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.add-container form label {
+  font-size: 22px;
+}
+
+input[type=text], input[type=url], input[type=number] {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  border: 1px solid #969EA8;
+  outline: none;
+}
+
+.primary-button {
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: #FFF;
+box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+cursor: pointer;
+}
+
+.secondary-button {
+  width: auto;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+border: 2px solid #384657;
+color: #384657;
+box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+cursor: pointer;
+}
+
+.add-container form .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
+}

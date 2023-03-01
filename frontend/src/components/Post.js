@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import "./Post.css";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -13,11 +13,18 @@ const Posts = () => {
     fetchPosts();
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleClick = (param) => {
+    navigate(`/${param}`);
+  }
+
   return (
     <div className="container">
       {Array.isArray(posts) && posts.map(post => (
-        <div className="card" key={post._id}>
-          <img src={!post.Pic ? process.env.PUBLIC_URL + `/images/profile.png` : post.Pic} alt="profile"/>
+        <div className="card" id={post._id} key={post._id}>
+          <button className="edit" onClick={() => handleClick(post._id)}><i className="fa-solid fa-pen"></i></button>
+          <img src={!post.Pic ? process.env.PUBLIC_URL + `/images/profile.png` : post.Pic} alt="profile" />
           <h2>{post.Lastname} {post.Firstname}</h2>
           <p>{post.Phone}</p>
         </div>

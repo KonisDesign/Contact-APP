@@ -18,7 +18,7 @@ const postSchema = mongoose.Schema(
 
         Fav: {
             type: String,
-            default: "NO"
+            default: "false"
         },
 
         Pic: {
