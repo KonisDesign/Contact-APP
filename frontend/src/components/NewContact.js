@@ -9,7 +9,8 @@ function NewContact() {
     Firstname: '',
     Phone: '',
     Fav: '',
-    Pic: ''
+    Pic: '',
+    Github: ''
   });
 
   const handleSubmit = async (event) => {
@@ -43,6 +44,8 @@ function NewContact() {
         <input type="number"  placeholder='0610101010' name="Phone" value={formData.Phone} onChange={handleInputChange} required />
         <label htmlFor="Pic">Photo:</label>
         <input type="url"  placeholder='http://' name="Pic" value={formData.Pic} onChange={handleInputChange} />
+        <label htmlFor="Github">Github:</label>
+        <input type="url"  placeholder='http://' name="Github" value={formData.Github} onChange={handleInputChange} />
         <button className='primary-button' type="submit">Save</button>
       </form>
     </div>

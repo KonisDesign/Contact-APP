@@ -13,6 +13,7 @@ const EditContact = () => {
         Phone: "",
         Fav: "",
         Pic: "",
+        Github: "",
     });
 
     const { id } = useParams();
@@ -49,6 +50,9 @@ const EditContact = () => {
         if (!newPost.Pic) {
             newPost.Pic = postToEdit.Pic;
         }
+        if (!newPost.Github) {
+            newPost.Github = postToEdit.Github;
+        }
     }
 
     const handleFormSubmit = async (event) => {
@@ -64,6 +68,8 @@ const EditContact = () => {
             Phone: "",
             Fav: "",
             Pic: "",
+            Github: "",
+            
         });
         navigate('/');
     };
@@ -86,6 +92,10 @@ const EditContact = () => {
 
                 <label htmlFor="Pic">Photo:</label>
                 <input type="url" name="Pic" value={newPost.Pic || postToEdit.Pic} onChange={handleInputChange} />
+
+                <label htmlFor="Github">Github:</label>
+                <input type="url" name="Github" value={newPost.Github || postToEdit.Github} onChange={handleInputChange} />
+
                 <div className="row">
                 <button className="primary-button" type="submit">Update</button>
                 <DeleteContact />

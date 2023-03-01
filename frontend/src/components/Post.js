@@ -27,6 +27,9 @@ const Posts = () => {
           <img src={!post.Pic ? process.env.PUBLIC_URL + `/images/profile.png` : post.Pic} alt="profile" />
           <h2>{post.Firstname} {post.Lastname}</h2>
           <p>{post.Phone}</p>
+          <div className="row">
+            {post.Github ? <a href={post.Github} target="_blank"><i className="fa-brands fa-github"></i></a> : ""}
+          </div>
         </div>
       ))}
     </div>

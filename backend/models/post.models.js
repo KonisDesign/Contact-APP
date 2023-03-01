@@ -24,6 +24,11 @@ const postSchema = mongoose.Schema(
         Pic: {
             type: String,
             default: ""
+        },
+
+        Github: {
+            type: String,
+            default: ""
         }
     },
 

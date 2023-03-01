@@ -15,7 +15,8 @@ module.exports.setPosts = async (req, res) => {
         Firstname: req.body.Firstname,
         Phone: req.body.Phone,
         Fav: req.body.Fav,
-        Pic: req.body.Pic
+        Pic: req.body.Pic,
+        Github: req.body.Github
     })
     res.status(200).json(post)
 };

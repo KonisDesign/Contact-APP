@@ -26,7 +26,7 @@ a {
 .container .card {
   width: 250px;
   height: auto;
-  padding-top: 20px;
+  padding: 20px 0px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -38,6 +38,19 @@ a {
 
 .container .card:hover button {
   display: block;
+}
+
+.container .card .row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .card .row a {
+  font-size: 20px;
 }
 
 img {
