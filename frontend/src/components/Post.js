@@ -25,7 +25,7 @@ const Posts = () => {
         <div className="card" id={post._id} key={post._id}>
           <button className="edit" onClick={() => handleClick(post._id)}><i className="fa-solid fa-pen"></i></button>
           <img src={!post.Pic ? process.env.PUBLIC_URL + `/images/profile.png` : post.Pic} alt="profile" />
-          <h2>{post.Lastname} {post.Firstname}</h2>
+          <h2>{post.Firstname} {post.Lastname}</h2>
           <p>{post.Phone}</p>
         </div>
       ))}
