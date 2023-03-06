@@ -75,34 +75,36 @@ const EditContact = () => {
     };
 
     if (!postToEdit) {
-        return <div>Contact not found</div>;
+        return <div className="add-container">
+            <h1>Contact not found</h1>
+        </div>;
+    } else {
+        return (
+            <div className="add-container">
+                <form onSubmit={handleFormSubmit}>
+                    <label htmlFor="Lastname">Lastname:</label>
+                    <input type="text" name="Lastname" value={newPost.Lastname || postToEdit.Lastname} onChange={handleInputChange} />
+    
+                    <label htmlFor="Firstname">Firstname:</label>
+                    <input type="text" name="Firstname" value={newPost.Firstname || postToEdit.Firstname} onChange={handleInputChange} />
+    
+                    <label htmlFor="Phone">Phone:</label>
+                    <input type="number" name="Phone" value={newPost.Phone || postToEdit.Phone} onChange={handleInputChange} />
+    
+                    <label htmlFor="Pic">Photo:</label>
+                    <input type="url" name="Pic" value={newPost.Pic || postToEdit.Pic} onChange={handleInputChange} />
+    
+                    <label htmlFor="Github">Github:</label>
+                    <input type="url" name="Github" value={newPost.Github || postToEdit.Github} onChange={handleInputChange} />
+    
+                    <div className="row">
+                    <button className="primary-button" type="submit">Update</button>
+                    <DeleteContact />
+                    </div>
+                </form>
+            </div>
+        );
     }
-
-    return (
-        <div className="add-container">
-            <form onSubmit={handleFormSubmit}>
-                <label htmlFor="Lastname">Lastname:</label>
-                <input type="text" name="Lastname" value={newPost.Lastname || postToEdit.Lastname} onChange={handleInputChange} />
-
-                <label htmlFor="Firstname">Firstname:</label>
-                <input type="text" name="Firstname" value={newPost.Firstname || postToEdit.Firstname} onChange={handleInputChange} />
-
-                <label htmlFor="Phone">Phone:</label>
-                <input type="number" name="Phone" value={newPost.Phone || postToEdit.Phone} onChange={handleInputChange} />
-
-                <label htmlFor="Pic">Photo:</label>
-                <input type="url" name="Pic" value={newPost.Pic || postToEdit.Pic} onChange={handleInputChange} />
-
-                <label htmlFor="Github">Github:</label>
-                <input type="url" name="Github" value={newPost.Github || postToEdit.Github} onChange={handleInputChange} />
-
-                <div className="row">
-                <button className="primary-button" type="submit">Update</button>
-                <DeleteContact />
-                </div>
-            </form>
-        </div>
-    );
 };
 
 export default EditContact;

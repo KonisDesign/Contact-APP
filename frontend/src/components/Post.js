@@ -28,7 +28,7 @@ const Posts = () => {
           <h2>{post.Firstname} {post.Lastname}</h2>
           <p>{post.Phone}</p>
           <div className="row">
-            {post.Github ? <a href={post.Github} target="_blank"><i className="fa-brands fa-github"></i></a> : ""}
+            {post.Github ? <a href={post.Github} target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a> : ""}
           </div>
         </div>
       ))}

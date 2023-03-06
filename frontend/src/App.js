@@ -6,10 +6,6 @@ import NewContactBtn from './components/NewContactBtn';
 import NewContact from './components/NewContact';
 import EditContact from './components/EditContact';
 
-function Add() {
-  return <h2>New</h2>;
-}
-
 function App() {
   useEffect(() => {
     const script = document.createElement('script');
